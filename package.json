@@ -1,10 +1,12 @@
 {
-  "name": "learn-storybook",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ds-mps",
+  "version": "1.2.0",
+  "main": "./dist/index.js", 
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:components": "tsc -p tsconfig.components.json",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
@@ -36,5 +38,6 @@
     "storybook": "^8.6.2",
     "tailwindcss": "^4.0.9",
     "typescript": "^5"
-  }
+  },
+   "files": ["dist"]
 }

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 type HeadingProps = {
   text: string
@@ -6,7 +6,11 @@ type HeadingProps = {
   className?: string
 }
 
-const Heading: FC<HeadingProps> = ({ text, level = 1, className = '' }) => {
+export const Heading: FC<HeadingProps> = ({
+  text,
+  level = 1,
+  className = '',
+}) => {
   const size = {
     1: 'text-4xl',
     2: 'text-3xl',
@@ -18,5 +22,3 @@ const Heading: FC<HeadingProps> = ({ text, level = 1, className = '' }) => {
 
   return <p className={`${size[level]} font-bold ${className}`}>{text}</p>
 }
-
-export default Heading
